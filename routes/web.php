@@ -25,4 +25,8 @@ Route::get('/domains', function () {
     return view('domains.index');
 })->middleware(['auth'])->name('domains');
 
+Route::get('/servers', function () {
+    return view('servers.index');
+})->middleware(['auth'])->name('servers');
+
 require __DIR__.'/auth.php';
