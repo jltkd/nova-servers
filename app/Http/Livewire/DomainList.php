@@ -15,7 +15,7 @@ class DomainList extends Component
     public function render()
     {
         return view('livewire.domain-list', [
-            'domains' => Domain::search('name', $this->search)->paginate(25),
+            'domains' => Domain::search('name', $this->search)->orderBy('name', 'ASC')->paginate(25),
         ]);
     }
 }
