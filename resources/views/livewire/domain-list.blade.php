@@ -33,7 +33,7 @@
                             <a class="flex content-center" href="{{ $domain->domain }}" target="_blank">{{ $domain->name }} <x-external-link-icon/></a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            <a class="flex content-center" href="//{{$domain->server->ip_address}}:2086" target="_blank">{{ $domain->server->name }} <x-external-link-icon/></a>
+                            <a class="flex content-center" href="http://{{$domain->server->ip_address}}:2086" target="_blank">{{ $domain->server->name }} <x-external-link-icon/></a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                             @if($domain->registrar)
