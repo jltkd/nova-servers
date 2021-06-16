@@ -26,9 +26,9 @@
                         </th>
                     </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
+                    <tbody class="bg-white">
                     @forelse($domains as $domain)
-                    <tr>
+                    <tr class="{{ $loop->even ? 'bg-gray-50' : '' }}">
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                             <a class="flex content-center" href="{{ $domain->domain }}" target="_blank">{{ $domain->name }} <x-external-link-icon/></a>
                         </td>
