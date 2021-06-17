@@ -1,4 +1,4 @@
-<div class="flex flex-col mt-8">
+<div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="mb-4 w-1/4">
@@ -32,20 +32,20 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                             <a class="flex content-center" href="{{ $domain->domain }}" target="_blank">{{ $domain->name }} <x-external-link-icon/></a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             <a class="flex content-center" href="http://{{$domain->server->ip_address}}:2086" target="_blank">{{ $domain->server->name }} <x-external-link-icon/></a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             @if($domain->registrar)
                                 {{ $domain->registrar }}
                             @endif
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             @if($domain->expires)
                             {{ \Carbon\Carbon::parse($domain->expires)->format('m-d-Y')}}
                             @endif
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             @if($domain->manages === 1)
                                 Us
                             @else

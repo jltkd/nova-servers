@@ -10,7 +10,9 @@
             <div>
                 <div>
                     <livewire:server-cards/>
-                    <livewire:domain-list/>
+                    <div class="mt-8">
+                        <livewire:domain-list/>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <div>
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
         @foreach($servers as $server)
-        <div x-data="" class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+        <a href="http://{{ $server->ip_address }}:2086" target="_blank" class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
             <dt class="text-sm font-medium text-gray-500 truncate">
                 {{ $server->name }}
             </dt>
@@ -14,7 +14,7 @@
                     {{ $server->domains->count() }} <span class="text-sm text-gray-400">Domains</span>
                 </dd>
             @endif
-        </div>
+        </a>
         @endforeach
     </dl>
 </div>
