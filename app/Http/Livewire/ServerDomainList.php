@@ -12,6 +12,7 @@ class ServerDomainList extends Component
     use WithPagination;
 
     public $server;
+    public $search = '';
 
     public function mount(Server $server)
     {
@@ -21,7 +22,7 @@ class ServerDomainList extends Component
     public function render()
     {
         return view('livewire.server-domain-list', [
-            'domains' => Domain::where('server_id', $this->server->id)->paginate(25)
+            'domains' => Domain::search('name', $this->search)->where('server_id', $this->server->id)->paginate(25)
         ]);
     }
 }
