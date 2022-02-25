@@ -22,7 +22,10 @@ class ServerDomainList extends Component
     public function render()
     {
         return view('livewire.server-domain-list', [
-            'domains' => Domain::search('name', $this->search)->where('server_id', $this->server->id)->paginate(25)
+            'domains' => Domain::search('name', $this->search)
+                ->where('server_id', $this->server->id)
+                ->orderby('name', 'ASC')
+                ->paginate(25)
         ]);
     }
 }
