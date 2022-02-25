@@ -29,4 +29,6 @@ Route::get('/servers', function () {
     return view('servers.index');
 })->middleware(['auth'])->name('servers');
 
+Route::get('/servers/{server:slug}', [\App\Http\Controllers\ServerController::class, 'show'])->middleware('auth')->name('server');
+
 require __DIR__.'/auth.php';

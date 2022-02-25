@@ -61,7 +61,7 @@
                     </tr>
                     @empty
                         <tr>
-                            <td class="px-12 py-12 whitespace-nowrap text-gray-900 font-bold text-2xl text-center" colspan="5">Domain Not Found</td>
+                            <td class="px-12 py-12 whitespace-nowrap text-gray-900 font-bold text-2xl text-center" colspan="5">Domains Not Found</td>
                         </tr>
                     @endforelse
                     </tbody>
