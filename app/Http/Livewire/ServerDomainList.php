@@ -21,7 +21,7 @@ class ServerDomainList extends Component
     public function render()
     {
         return view('livewire.server-domain-list', [
-            'domains' => Domain::where('server_id', $this->server->id)->paginate(10)
+            'domains' => Domain::where('server_id', $this->server->id)->paginate(25)
         ]);
     }
 }
