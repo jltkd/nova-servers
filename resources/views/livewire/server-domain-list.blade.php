@@ -13,9 +13,6 @@
                             Name
                         </th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Server
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                             Registrar
                         </th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -33,9 +30,6 @@
                                 <a class="flex content-center" href="{{ $domain->domain }}" target="_blank">
                                     {{ $domain->name }} <x-external-link-icon/>
                                 </a>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                <a class="flex content-center" href="http://{{$domain->server->ip_address}}:2086" target="_blank">{{ $domain->server->name }} <x-external-link-icon/></a>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                 @if($domain->registrar)
